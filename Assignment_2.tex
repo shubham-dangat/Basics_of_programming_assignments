@@ -1,0 +1,139 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\usepackage{setspace}
+\singlespacing
+\usepackage{caption}
+\captionsetup{justification=centering}
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath}
+
+
+\begin{document}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\cmyvec}[1]{\ensuremath{\begin{pmatrix*}[c]#1\end{pmatrix*}}}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\proj}[2]{\textbf{proj}_{\vec{#1}}\vec{#2}}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\Rnum}[1]{\lowercase\expandafter{\romannumeral #1\relax}}
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\title{
+BASICS OF PROGRAMMING
+
+ASSIGNMENT - 2
+}
+\author{ SHUBHAM RAMESH DANGAT - SM21MTECH14003}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\bibliographystyle{IEEEtran}
+\section*{ Chapter \RNum{3} Miscellaneous Example-\RNum{6} Q.23}
+
+Show that the area of the triangle formed by the lines whose equations a_s + b_y + c_s = 0,($$ s=1,2,3 $$) is (\Delta)^2/(2C1C2C3)
+where \Delta = \mydet{
+ a_1 & b_1 & c_1  \\ 
+ a_2 & b_2 & c_2  \\
+ a_3 & b_3 & c_3 
+}
+\section*{\textbf{Solution}}
+\noindent
+Clearly, we can scale the coefficients of a given linear equation by any (non-zero) constant and the result is unchanged. Therefore, by dividing-through by  $$\sqrt{a_i^2+b_i^2}$$ , we may assume our equations are in "normal form":
+\begin{align}
+x \cos\theta + y \sin\theta - p &= 0 \\
+x \cos\phi + y \sin\phi - q &= 0 \\
+x \cos\psi + y \sin\psi - r &= 0
+\end{align}
+
+with $\theta$, $\phi$, $\psi$ and p, q, r (and A, B, C and a, b, c) as in the figure 2:
+
+
+Then,
+C_1 = \left|\begin{array}{cc}
+\cos\phi & \sin\phi \\
+\cos\psi & \sin\psi
+\end{array} \right| = 
+
+\sin\psi\cos\phi - \cos\psi\sin\phi = \sin(\psi-\phi) = 
+
+\sin \angle ROQ = \sin A
+
+\textsl{}
+
+Likewise,
+
+\textsl{}
+
+
+C_2 = \sin B \qquad C_3 = \sin C
+
+\textsl{}
+
+Moreover,
+
+\textsl{}
+
+D := \left|\begin{array}{ccc}
+\cos\theta & \sin\theta & - p \\
+\cos\phi   & \sin\phi   & - q \\
+\cos\psi   & \sin\psi   & - r
+\end{array}\right| = 
+
+- \left( p C_1 + q C_2 + r C_3) = - \left(\;p \sin A + q \sin B + r \sin C\;\right)
+
+\textsl{}
+
+Writing d for the circumdiameter of the triangle, the Law of Sines tells us that,
+
+\dfrac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = d
+
+\textsl{}
+
+
+Therefore,
+\begin{align}
+D &= - \left( \frac{ap}{d} + \frac{bq}{d} + \frac{cr}{d} \right) \\[4pt]
+&= -\frac{1}{d}\left(\;ap + b q + c r\;\right) \\[4pt]
+&= -\frac{1}{d}\left(\;2|\triangle COB| + 2|\triangle AOC| + 2|\triangle BOA| \;\right) \\[4pt]
+&= -\frac{2\;|\triangle ABC|}{d}
+\end{align}
+
+Also,
+
+C_1 C_2 C_3 = \sin A \sin B \sin C = \dfrac{a}{d}\dfrac{b}{d}\sin C
+
+
+= \dfrac{2\;|\triangle ABC|}{d^2}
+
+\textsl{}
+
+Finally:
+
+\textsl{}
+
+\dfrac{\Delta^2}{2C_1C_2C_3} = \dfrac{4\;|\triangle ABC|^2/d^2}{4\;|\triangle ABC|/d^2} = |\triangle ABC|
+
+\textsl{}
+
+Hence Proved.
+
+\textsl{}
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=\columnwidth]{bop_3.PNG}
+\end{figure}
+\qquad Figure 1: Actual triangle
+
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=\columnwidth]{bop_2.PNG}
+\qquad Figure 2: Constructions done on above triangle for proof
+\end{figure}
+\end{document}
