@@ -127,15 +127,17 @@ For two vectors,
 \end{equation}
 \begin{align}
 
-\vec{A-0}=\myvec{r_1sin(\theta_1)\\r_1cos(\theta_1)},
-\vec{A-D}=\myvec{r_1sin(\theta_1)-rsin(\theta)\\r_1cos(\theta_1)-rcos(\theta)}
+\norm{A-0}=\myvec{r_1sin(\theta_1)\\r_1cos(\theta_1)},
+
+\norm{A-D}=\myvec{r_1sin(\theta_1)-rsin(\theta)\\r_1cos(\theta_1)-rcos(\theta)},
 
 \textsl{}
 
-\vec{B-D}=\myvec{r_2sin(\theta_2)-rsin(\theta)\\r_2sin(\theta_2)-rcos(\theta)},
-\vec{B-O}=\myvec{r_2sin(\theta_2)\\r_2cos(\theta_2)}
+\norm{B-D}=\myvec{r_2sin(\theta_2)-rsin(\theta)\\r_2sin(\theta_2)-rcos(\theta)},
 
-\vec{A-B}=\myvec{{r_1sin(\theta_1)-r_2sin(\theta_2)\\r_1cos(\theta_1)-r_2cos(\theta_2)}}
+\norm{B-O}=\myvec{r_2sin(\theta_2)\\r_2cos(\theta_2)},
+
+\norm{A-B}=\myvec{{r_1sin(\theta_1)-r_2sin(\theta_2)\\r_1cos(\theta_1)-r_2cos(\theta_2)}}
 
 \end{align}
 \textsl{}
@@ -158,20 +160,19 @@ $\therefore $ Substituting A-0 , A-D , B-D , B-O , A-B and simplifying further w
 
 \textsl{ }
 
-\dfrac{1}{2}\norm{(r_1)\times(r\times sin(\dfrac{\theta}{2}))}+\frac{1}{2}\norm{\mathbfnorm{(r_2)\times(r\times sin(\dfrac{\theta}{2}))}}}
-
+\dfrac{1}{2}r_1rsin(\dfrac{\theta}{2})}+\frac{1}{2}\mathbfnorm{r_2r sin(\dfrac{\theta}{2})}}
 
 \begin{equation}
-= \dfrac{1}{2}\norm{(r_1)\times(r_2\times sin(\dfrac{\theta}{2}))}
+= \dfrac{1}{2}r_1r_2sin(\dfrac{\theta}{2})
 \end{equation} \quad
 
 \textsl{}
 
-\textsl{Now , R.H.S = \dfrac{1}{2}\norm{(r_1)\times (r_2 \times sin(\theta))}}
+\textsl{Now , R.H.S = \dfrac{1}{2}r_1(r_2sin(\theta))}
 
 \textsl{}
 \begin{equation}
-= \dfrac{1}{2}\norm{(r_1) \times (r_2 \times 2 \times sin(\dfrac{\theta}{2}) \times cos(\dfrac{\theta}{2})}}
+= \dfrac{1}{2}2r_1 r_2sin(\dfrac{\theta}{2})cos(\dfrac{\theta}{2})}}
 \end{equation}
 \textsl{}
 
@@ -179,7 +180,7 @@ $\therefore $ Substituting A-0 , A-D , B-D , B-O , A-B and simplifying further w
 \textsl{}
 \begin{equation}
 
-$\therefore$  \dfrac{1}{2}$\times \norm {r \times (r_1 + r_2)} = \norm{r_1 \times r_2 \times \cos(\dfrac{\theta}{2})}\qquad
+$\therefore$  \dfrac{1}{2}r(r_1 + r_2)} = r_1r_2 \cos(\dfrac{\theta}{2})\qquad
 \end{equation}
 \textsl{ }
 
@@ -187,16 +188,20 @@ $\therefore$  \dfrac{1}{2}$\times \norm {r \times (r_1 + r_2)} = \norm{r_1 \time
 
 $\therefore$
 \begin{equation}
- r = \abs{(\dfrac{2 \times r_1 \times r_2}{r_1+r_2}\times cos(\dfrac{\theta}{2}))}
+ r = \dfrac{2 r_1 r_2}{r_1+r_2} cos(\dfrac{\theta}{2})
 \end{equation}
 
 \textsl{ }
 
-\textsl{Now , D has co-ordinates as \mathbf{\myvec{r\\ \theta}}}
+\textsl{Now , D has co-ordinates as \mathbf{\myvec{r\\\theta}}}
+
+
 
 \textsl{ }
 
-\textsl{$\therefore$ Co-ordinates of D are \myvec{\dfrac{2 \tmess r_1 \times r_2}{r_1+r_2} \times cos(\dfrac{\theta}{2}) \\ \dfrac{\theta_1+\theta_2}{2}}}
+
+\textsl{$\therefore$ Co-ordinates of D are \myvec{\dfrac{2r_1r_2}{r_1+r_2}
+cos(\dfrac{\theta}{2}) \\\\ \dfrac{\theta_1+\theta_2}{2}}}
 
 \begin{figure}[!ht]
     \center
